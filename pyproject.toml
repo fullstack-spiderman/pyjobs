@@ -1,14 +1,44 @@
 [tool.poetry]
-name = "pyjobs"
-version = "0.1.0"
-description = ""
 authors = ["Arjun KayalMoni <arjun.umathanu@gmail.com>"]
+description = "A demo backend microservice project"
+name = "pyjobs"
 readme = "README.md"
+version = "0.1.0"
 
 [tool.poetry.dependencies]
+aiofiles = "^23.1.0"
+fastapi = "^0.95.0"
+httpx = "^0.24.0"
+jinja2 = "^3.1.2"
+psycopg2 = "^2.9.6"
+pydantic = {extras = ["dotenv", "email", "mypy"], version = "^1.10.7"}
 python = "^3.11"
+sqlmodel = "^0.0.8"
+typer = "^0.7.0"
+uvicorn = "^0.21.1"
 
+[tool.poetry.group.dev.dependencies]
+autoflake8 = "^0.4.0"
+autopep8 = "^2.0.2"
+black = "^23.3.0"
+flake8 = "^6.0.0"
+isort = "^5.12.0"
+mypy = "^1.2.0"
+types-psycopg2 = "^2.9.21.9"
+types-python-dateutil = "^2.8.19.12"
+types-urllib3 = "^1.26.25.10"
+typing-extensions = "^4.5.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.3.0"
+pytest-asyncio = "^0.21.0"
+pytest-cov = "^4.0.0"
+pytest-env = "^0.8.1"
+pytest-httpx = "^0.22.0"
+pytest-mock = "^3.10.0"
+pytest-randomly = "^3.12.0"
+pytest-sugar = "^0.9.7"
 
 [build-system]
-requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
